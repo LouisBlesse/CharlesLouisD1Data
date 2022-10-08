@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arbre.cpp" />
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="D1DataStruct.cpp" />
     <ClCompile Include="Pile.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="Programme3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arbre.h" />
     <ClInclude Include="Carte.h" />
     <ClInclude Include="Pile.h" />
     <ClInclude Include="Programme1.h" />

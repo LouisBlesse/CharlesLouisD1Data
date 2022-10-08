@@ -13,31 +13,33 @@ using namespace std;
 
 int main()
 {
-    int choix;
-    cout << "Quel programme voulez vous lancer \n 1: Jeu de batailles\n 2: L usine \n 3: Dictionnaire \n 4: Arbre genealogique\n 5: Liste distribuee\n\n";
-    cin >> choix;
+    int choix = 0;
+    while (choix != 6) {
+        cout << "Quel programme voulez vous lancer \n 1: Jeu de batailles\n 2: L usine \n 3: Dictionnaire \n 4: Arbre genealogique\n 5: Liste distribuee\n 6: Quitter\n\n";
+        cin >> choix;
+  
 
-    if (choix == 1) {
-        Programme1 party = Programme1();
-        party.Play();
+        if (choix == 1) {
+            Programme1 party = Programme1();
+            party.Play();
+        }
+        /*else if (choix == 2) {
+            Programme2 party = Programme2();
+            party.Play();
+        }*/
+        else if (choix == 3) {
+            Programme3 party = Programme3();
+            party.Play();
+        }
+        /*else if (choix == 4) {
+            Programme4 party = Programme4();
+            party.Play();
+        }
+        else if (choix == 5) {
+            Programme5 party = Programme5();
+            party.Play();
+        }*/
     }
-    /*else if (choix == 2) {
-        Programme2 party = Programme2();
-        party.Play();
-    }*/
-    else if (choix == 3) {
-        Programme3 party = Programme3();
-        party.Play();
-    }
-    /*else if (choix == 4) {
-        Programme4 party = Programme4();
-        party.Play();
-    }
-    else if (choix == 5) {
-        Programme5 party = Programme5();
-        party.Play();
-    }*/
-
 }
 /*
 int main()
