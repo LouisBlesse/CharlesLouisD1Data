@@ -1,6 +1,6 @@
 #include "Programme3.h"
 #include <iostream>
-#include "Arbre.cpp"
+
 using namespace std;
 
 void Programme3::Play() {
@@ -15,10 +15,10 @@ void Programme3::Play() {
             Add();
         }
         else if (choix == 2) {
-            //Arbre Tree = Delete(Tree);
+            Tree = Delete(Tree);
         }
         else if (choix == 3) {
-            //Arbre Tree = Afficher(Tree);
+            Tree = Afficher(Tree);
         }
     }
 
@@ -27,7 +27,7 @@ void Programme3::Play() {
 void Programme3::Add() {
     cout << "WIP";
 }
-/*
+
 Arbre Programme3::Delete(Arbre Tree) {
     cout << "WIP";
     return Tree;
@@ -36,4 +36,4 @@ Arbre Programme3::Delete(Arbre Tree) {
 Arbre Programme3::Afficher(Arbre Tree) {
     cout << "WIP";
     return Tree;
-}*/
+}
