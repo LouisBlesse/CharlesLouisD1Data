@@ -124,27 +124,25 @@ void Programme3::insert(string mot, Arbre::Noeud*& t, int i, bool check)
             insert(x, t->droite);*/
     }
     catch (const std::exception& e) {
-        std::cout << "Caught exception \"" << e.what() << "\"\n";
+        cout << "Caught exception \"" << e.what() << "\"\n";
     }
 }
 
-void Programme3::printBT(const string& prefix, const Arbre::Noeud* node, bool isLeft)
+void Programme3::print(const string& prefix, const Arbre::Noeud* t, bool isLeft)
 {
-    if (node != nullptr)
+    if (t != nullptr)
     {
-        std::cout << prefix;
-        std::cout << (isLeft ? "|--" : "L--");
-        // print the value of the node
-        std::cout << node->data << std::endl;
-        // enter the next tree level - left and right branch
-        printBT(prefix + (isLeft ? "|   " : "    "), node->droite, true);
-        printBT(prefix + (isLeft ? "|   " : "    "), node->gauche, false);
+        cout << prefix;
+        cout << (isLeft ? "|--" : "L--");
+        cout << t->data << endl;
+        print(prefix + (isLeft ? "|   " : "    "), t->droite, true);
+        print(prefix + (isLeft ? "|   " : "    "), t->gauche, false);
     }
 }
 
-void Programme3::printBT(const Arbre::Noeud* node)
+void Programme3::print(const Arbre::Noeud* t)
 {
-    printBT("", node, false);
+    print("", t, false);
 }
 
 
@@ -155,20 +153,25 @@ Arbre Programme3::Delete(Arbre Tree) {
 
 void Programme3::Afficher(Arbre Tree) {
     //cout << "WIP";
-    printBT(Tree.racine);
+    print(Tree.racine);
 }
 
 bool Programme3::Recherche(Arbre Tree) {
-    cout << "WIP";
-    return true;
+    string mot;
+    cout << "Quel mot voulez vous rechercher ?";
+    cin >> mot;
+    for (int i = 0; i < mot.length(); i++)
+    {
+        SeachNode(Tree.racine, mot, i);
+    }
+
 }
-/*
-Arbre::Noeud Programme3::SeachNode(Arbre Tree, string mot) {
-    if (Tree.racine == NULL) {
+
+bool Programme3::SeachNode(Arbre::Noeud*& t, string mot, int i) {
+    /*if (Tree.racine == NULL) {
         Arbre::Noeud t(mot[0]);
     }
-    else
+    else*/
 
     return t;
 }
-*/
