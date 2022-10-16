@@ -8,7 +8,7 @@
 #include "Programme2.h"
 #include "Programme3.h"
 //#include "Programme4.h"
-//#include "Programme5.h"
+#include "Programme5.h"
 using namespace std;
 
 int main()
@@ -34,11 +34,11 @@ int main()
         /*else if (choix == 4) {
             Programme4 party = Programme4();
             party.Play();
-        }
+        }*/
         else if (choix == 5) {
             Programme5 party = Programme5();
             party.Play();
-        }*/
+        }
     }
 }
 /*
