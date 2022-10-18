@@ -25,26 +25,66 @@ public:
 	};
 	struct Node* h = NULL;
 
-	void add(int nb) {
-		struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
+	
+	void add(int nb, struct Node** h) {
+		struct Node* newnode = new Node;
 		newnode->data = nb;
-		cout << newnode->data;
+		//cout << newnode->data;
 		newnode->p = NULL;
-		newnode->n = h;
-		if (h != NULL) {
-			h->p = newnode;
-			h = newnode;
-			cout << "newhead";
+		newnode->n = (*h);
+
+		if ((*h) != NULL) {
+			(*h)->p = newnode;
 		}
+		(*h) = newnode;
 	};
+
 	void print() {
 		struct Node* newnode;
-		cout << "hi";
+		//cout << "hi";
 		newnode = h;
 		while (newnode != NULL) {
-			cout << newnode->data << "-->";
+			cout << newnode->data;
+			if (newnode->n != NULL)
+				cout << "-->";
 			newnode = newnode->n;
 		}
 	};
+
+	void send(Node* node) {
+		node->data--;
+		if (node->n != NULL) {
+			node->n->data++;
+			//cout << "\nnext pas null \n";
+		}
+		else {
+			h->data++;
+			//cout << "\nnext null \n";
+		}
+
+		node->data--;
+		if (node->p != NULL) {
+			node->p->data++;
+			//cout << "\nprochain pas null \n";
+		}
+		else {
+			struct Node* tmp;
+			tmp = node;
+			while (tmp->n != NULL) {
+				//cout << "\nprochain est nu, retour \n";
+				tmp = tmp->n;
+			}
+			tmp->data++;
+		}
+	}
+
+	void sum(Node* node) {
+		int  res = 0;
+		while (node != NULL) {
+			res += node->data;
+			node = node->n;
+		}
+		cout << "\nLa somme totale est de " << res << "\n\n";
+	}
 private:
 };
