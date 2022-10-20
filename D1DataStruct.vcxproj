@@ -140,23 +140,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arbre.cpp" />
+    <ClCompile Include="ArbreP4.cpp" />
     <ClCompile Include="Carte.cpp" />
     <ClCompile Include="D1DataStruct.cpp" />
+    <ClCompile Include="File.cpp" />
     <ClCompile Include="Liste.cpp" />
     <ClCompile Include="Pile.cpp" />
     <ClCompile Include="Programme1.cpp" />
     <ClCompile Include="Programme2.cpp" />
     <ClCompile Include="Programme3.cpp" />
+    <ClCompile Include="Programme4.cpp" />
     <ClCompile Include="Programme5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbre.h" />
+    <ClInclude Include="ArbreP4.h" />
     <ClInclude Include="Carte.h" />
+    <ClInclude Include="File.h" />
     <ClInclude Include="Liste.h" />
     <ClInclude Include="Pile.h" />
     <ClInclude Include="Programme1.h" />
     <ClInclude Include="Programme2.h" />
     <ClInclude Include="Programme3.h" />
+    <ClInclude Include="Programme4.h" />
     <ClInclude Include="Programme5.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
